@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn Markdown – Jupyter &amp; GitHub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Learn Markdown</h1>
+  <p>The basics, plus how to use them in Jupyter Notebooks and on GitHub.</p>
+  <nav>
+    <a href="#basics">Basics</a><a href="#jupyter">Jupyter</a><a href="#github">GitHub</a>
+    <a href="#playground">Playground</a><a href="#flashcards">Flashcards</a><a href="#quiz">Quiz</a>
+  </nav>
+</header>
+<main>
+<section id="basics">
+  <h2>Markdown basics</h2>
+  <p>Each row shows the Markdown you type and what it produces.</p>
+  <div id="basics-list"></div>
+</section>
+
+<section id="jupyter">
+  <h2>Markdown in Jupyter Notebooks</h2>
+  <ul>
+    <li>Add a cell, then switch its type to <strong>Markdown</strong> (toolbar dropdown, or press <kbd>M</kbd> in command mode).</li>
+    <li>Press <kbd>Shift</kbd>+<kbd>Enter</kbd> to render the cell; double-click (or <kbd>Enter</kbd>) to edit it again.</li>
+    <li>Maths uses LaTeX: <code>$E = mc^2$</code> inline, <code>$$ ... $$</code> for display equations.</li>
+    <li>Raw HTML works inside Markdown cells, e.g. <code>&lt;span style="color:red"&gt;red&lt;/span&gt;</code>.</li>
+    <li>Images: <code>![alt](image.png)</code> with a path relative to the notebook.</li>
+    <li>Link to another cell/heading using <code>[text](#Heading-Name)</code> (spaces become hyphens).</li>
+    <li>Tables are supported with the pipe syntax.</li>
+    <li>Jupyter does <em>not</em> support GitHub-only extras such as task lists, <code>@mentions</code> or emoji shortcodes.</li>
+    <li>Use the <code>%%markdown</code> cell magic in a code cell to render Markdown from code, or <code>IPython.display.Markdown("**hi**")</code>.</li>
+  </ul>
+</section>
+
+<section id="github">
+  <h2>Markdown on GitHub</h2>
+  <ul>
+    <li>Used in <code>README.md</code> files, issues, pull requests, comments, discussions and wikis.</li>
+    <li>Task lists: <code>- [ ] todo</code> and <code>- [x] done</code>.</li>
+    <li>Mention people and teams with <code>@username</code>; reference issues/PRs with <code>#123</code>.</li>
+    <li>Emoji shortcodes: <code>:tada:</code> becomes 🎉.</li>
+    <li>Fenced code blocks with a language get syntax highlighting: <code>```python</code>.</li>
+    <li>Collapsible sections: <code>&lt;details&gt;&lt;summary&gt;Title&lt;/summary&gt; ... &lt;/details&gt;</code>.</li>
+    <li>Alerts: start a blockquote with <code>&gt; [!NOTE]</code>, <code>[!TIP]</code>, <code>[!WARNING]</code>…</li>
+    <li>Diagrams: a <code>```mermaid</code> block renders a chart. Maths with <code>$...$</code> also works.</li>
+    <li>GitHub renders <code>.ipynb</code> notebooks (including their Markdown cells) directly in the repo viewer.</li>
+    <li>Strikethrough <code>~~text~~</code>, autolinked URLs and tables are all supported.</li>
+  </ul>
+</section>
+
+<section id="playground">
+  <h2>Playground</h2>
+  <div class="split">
+    <textarea id="editor" aria-label="Markdown input" spellcheck="false"># Hello!
+
+Write **Markdown** here and see it *live*.
+
+- one
+- two
+
+> a quote
+
+`code` and [a link](https://github.com)</textarea>
+    <div id="preview" aria-live="polite"></div>
+  </div>
+  <p class="note">The preview is a simplified renderer covering the basics; Jupyter and GitHub support more.</p>
+</section>
+
+<section id="flashcards">
+  <h2>Flashcards</h2>
+  <div id="card" class="card" tabindex="0" role="button" aria-label="Flashcard, press to flip"></div>
+  <div class="row">
+    <button id="prev">Previous</button><button id="flip">Flip</button>
+    <button id="next">Next</button><button id="shuffle">Shuffle</button>
+    <span id="card-count"></span>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>Quiz</h2>
+  <div id="quiz-box"></div>
+</section>
+</main>
+<footer>Tip: practise a little each day – recall beats re-reading.</footer>
+<script src="script.js"></script>
+</body>
+</html>

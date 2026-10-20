@@ -1,0 +1,35 @@
+:root{--bg:#f6f8fa;--fg:#1f2328;--accent:#0969da;--border:#d0d7de}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 system-ui,sans-serif;background:var(--bg);color:var(--fg)}
+header{background:var(--fg);color:#fff;padding:1.5rem 1rem;text-align:center}
+header h1{margin:0}
+nav{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:1rem}
+nav a{color:#fff;padding:.25rem .75rem;border:1px solid #fff6;border-radius:2rem;text-decoration:none}
+nav a:hover{background:#fff3}
+main{max-width:60rem;margin:auto;padding:1rem}
+section{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0}
+h2{margin-top:0;border-bottom:1px solid var(--border);padding-bottom:.3rem}
+code,kbd,pre{font-family:ui-monospace,monospace;background:#eff1f3;border-radius:4px}
+code,kbd{padding:.1em .35em}
+pre{padding:.6rem;overflow:auto;margin:0;white-space:pre-wrap}
+.ex{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:.75rem 0}
+.ex h3{grid-column:1/-1;margin:.5rem 0 0;font-size:1.05rem}
+.out{border:1px dashed var(--border);padding:.4rem .8rem;border-radius:4px}
+.out>:first-child,#preview>:first-child{margin-top:0}
+.out>:last-child{margin-bottom:0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+textarea{width:100%;min-height:16rem;font:14px/1.5 ui-monospace,monospace;padding:.6rem;border:1px solid var(--border);border-radius:6px}
+#preview{border:1px solid var(--border);border-radius:6px;padding:.6rem 1rem;overflow:auto;min-height:16rem}
+blockquote{margin:.5rem 0;padding-left:1rem;border-left:4px solid var(--border);color:#59636e}
+.card{min-height:9rem;display:flex;align-items:center;justify-content:center;text-align:center;padding:1rem;
+ border:2px solid var(--accent);border-radius:10px;cursor:pointer;font-size:1.2rem;white-space:pre-wrap}
+.card.back{background:#ddf4ff}
+.row{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:.75rem}
+button{font:inherit;padding:.35rem .9rem;border:1px solid var(--border);border-radius:6px;background:#f6f8fa;cursor:pointer}
+button:hover{border-color:var(--accent)}
+.opt{display:block;width:100%;text-align:left;margin:.35rem 0}
+.opt.right{background:#dafbe1;border-color:#1a7f37}
+.opt.wrong{background:#ffebe9;border-color:#cf222e}
+.note{font-size:.9rem;color:#59636e}
+footer{text-align:center;padding:1rem;color:#59636e}
+@media(max-width:700px){.ex,.split{grid-template-columns:1fr}}
